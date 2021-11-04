@@ -1,0 +1,18 @@
+@import 'components/all';
+
+@import 'libs/normalize';
+@import 'variables';
+
+
+
+.wrapper {
+    width: calc(100vw - 100px);
+    height: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    border-radius: 10px;
+    max-width: 1400px;
+}
+.purple{
+    color: $main-purple;
+}
