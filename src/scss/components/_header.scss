@@ -3,9 +3,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: $container-width;
 }
 .header {
   padding-top: 50px;
+  position: fixed;
+  display: flex;
+  left: 0;
+  top: 0;
+  justify-content: space-between;
+  z-index: 3;
+  width: 100%;
   &-logo {
     display: flex;
     align-items: center;
