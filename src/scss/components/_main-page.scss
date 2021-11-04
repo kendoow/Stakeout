@@ -1,0 +1,192 @@
+@import "../variables";
+.wrapper {
+  width: 100%;
+  max-width: $container-width;
+}
+.header {
+  padding-top: 50px;
+  position: fixed;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+  &-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $black;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    padding-right: 105px;
+    img {
+      margin-right: 10px;
+    }
+  }
+  &-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-item {
+    color: #0b132a;
+    margin-right: 15px;
+    font-size: 16px;
+    border: 1px solid transparent;
+    transition: all $duration ease;
+    &:hover {
+      border-bottom: 1px solid #000;
+      transition: all $duration ease;
+    }
+  }
+  &-btn {
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid $main-purple;
+    color: $main-purple;
+    font-size: 16px;
+    line-height: 19px;
+    cursor: pointer;
+    transition: all $duration ease;
+    background-color: #fff;
+    &:hover {
+      background-color: $main-purple;
+      color: #fff;
+      transition: all $duration ease;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  padding-right: 90px;
+  &-item {
+    color: #4f5665;
+    margin-right: 40px;
+    border: 1px solid transparent;
+    transition: all $duration ease;
+    &:hover {
+      border-bottom: 1px solid #000;
+      transition: all $duration ease;
+    }
+  }
+}
+// MAIN
+.main {
+  padding-top: 200px;
+}
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-text {
+    margin-right: 10px;
+    max-width: 560px;
+  }
+  &-title {
+    font-size: 50px;
+    line-height: 70px;
+    font-weight: bold;
+  }
+  &-description {
+    padding-top: 20px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+  &-btn {
+    position: absolute;
+    margin-top: 55px;
+    color: #fff;
+    background-color: $main-purple;
+    transition: all $duration ease;
+    cursor: pointer;
+    text-align: center;
+    width: 250px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid $main-purple;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 25px;
+    border-radius: 10px;
+    &:hover {
+      color: $main-purple;
+      background-color: #fff;
+      transition: all $duration ease;
+    }
+  }
+}
+
+// ADVANTAGES
+.advantages {
+  padding-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1140px;
+  margin: 0 auto;
+  box-shadow: 3px 14px 22px -12px rgba(34, 60, 80, 0.2);
+  padding-bottom: 60px;
+  &-cart {
+    display: flex;
+    align-items: center;
+    padding-right: 80px;
+    border-right: 2px solid #eeeff2;
+  }
+  &-circle {
+    width: 55px;
+    height: 55px;
+    background-color: $main-purple;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 70px;
+    margin-right: 37px;
+  }
+  &-text {
+    h3 {
+      line-height: 30px;
+      font-weight: bold;
+      font-size: 25px;
+    }
+    p {
+      line-height: 30px;
+      font-weight: normal;
+      font-size: 20px;
+    }
+  }
+}
+// ABOUT PROJECT
+.about {
+  margin-top: 60px;
+  &-title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 70px;
+  }
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-piramida1 {
+    width: 114.31px;
+    height: 114.31px;
+    background: #7f67ce;
+    border-radius: 28px;
+    transform: matrix(0.71, -0.41, 1.22, 0.71, 0, 0);
+  }
+  &-text {
+    max-width: 950px;
+    font-size: 16px;
+    line-height: 30px;
+  }
+}

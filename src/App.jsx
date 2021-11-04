@@ -1,16 +1,14 @@
 import { Route, Routes } from "react-router";
-import Header from "./components/Header";
+import MainPage from './components/MainPage'
 const App = () => {
   return (
-    <div className="">
+    <>
     <Routes>
-      <Header />
       <div className="">
-        <Route path="/" exact element = {<Header/>}>
-        </Route>
+        <Route path="/" element = {<MainPage/>} exact/>
       </div>
       </Routes>
-    </div>
+    </>
   );
 };
 export default App;
