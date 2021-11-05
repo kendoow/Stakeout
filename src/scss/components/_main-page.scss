@@ -1,8 +1,4 @@
 @import "../variables";
-.wrapper {
-  width: 100%;
-  max-width: $container-width;
-}
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
@@ -103,26 +99,7 @@
     line-height: 30px;
   }
   &-btn {
-    position: absolute;
-    margin-top: 55px;
-    color: #fff;
-    background-color: $main-purple;
-    transition: all $duration ease;
-    cursor: pointer;
-    text-align: center;
-    width: 250px;
-    height: 60px;
-    border-radius: 10px;
-    border: 1px solid $main-purple;
-    font-weight: bold;
-    font-size: 16px;
-    line-height: 25px;
-    border-radius: 10px;
-    &:hover {
-      color: $main-purple;
-      background-color: #fff;
-      transition: all $duration ease;
-    }
+    @include btn-primary(#fff, $main-purple);
   }
 }
 
@@ -141,7 +118,7 @@
     align-items: center;
     padding-right: 80px;
     border-right: 2px solid #eeeff2;
-    &:last-child{
+    &:last-child {
       border-right: none;
     }
   }
@@ -203,17 +180,17 @@
     margin-bottom: 60px;
   }
   &-cards {
-    max-width: 1140px;  
+    max-width: 1140px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 3px 14px 22px -12px rgba(34, 60, 80, 0.2);
   }
-  &-card{
+  &-card {
     border-right: 2px solid #eeeff2;
     padding-right: 11%;
-    &:last-child{
+    &:last-child {
       border-right: none;
     }
   }
@@ -224,8 +201,305 @@
     line-height: 70px;
     color: $main-purple;
   }
-  p{
+  p {
     text-align: center;
     max-width: 200px;
+  }
+}
+// SPECIALIZATION
+.specialization {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 110px;
+  &-text {
+    h3 {
+      font-weight: bold;
+      font-size: 50px;
+      line-height: 70px;
+    }
+    p {
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 30px;
+      margin-top: 45px;
+      max-width: 800px;
+    }
+  }
+  &-image {
+    margin-right: 5%;
+  }
+}
+// BENEFITS
+.benefits {
+  background: linear-gradient(
+      0deg,
+      rgba(127, 103, 206, 0.6),
+      rgba(127, 103, 206, 0.6)
+    ),
+    url(../../assets/stk-profit-bg.png);
+  background-size: cover;
+  margin-bottom: 60px;
+  &-text {
+    padding-top: 30px;
+    margin-bottom: 50px;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 70px;
+    color: #fff;
+  }
+  &-decription {
+    color: #fff;
+    margin-top: 45px;
+
+    li {
+      list-style: disc;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 40px;
+    }
+  }
+  &-flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-image {
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+    &-btn {
+      @include btn-primary($main-purple, #fff);
+    }
+  }
+}
+// DEPOZIT
+.depozit {
+  margin-bottom: 100px;
+  &-title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 70px;
+    margin-bottom: 70px;
+  }
+  &-cards {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &-card {
+    margin-right: 60px;
+    max-width: 400px;
+    :last-child {
+      margin-right: 0;
+    }
+    &-title {
+      border-radius: 10px;
+      padding: 21px 75px;
+      background-color: #f7f7f7;
+      h3 {
+        padding-top: 10px;
+        font-size: 30px;
+        line-height: 15px;
+      }
+    }
+    &-items {
+      padding-top: 10px;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      li {
+        padding-bottom: 10px;
+        :last-child {
+          padding-bottom: 0;
+        }
+      }
+    }
+    &-descr {
+      max-width: 330px;
+      padding-left: 20px;
+      font-size: 16px;
+      line-height: 21px;
+      padding-bottom: 30px;
+    }
+    &-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      button {
+        @include btn-primary(#fff, $main-purple);
+      }
+    }
+  }
+}
+// ALGORITHM
+.algorithm {
+  &-title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 70px;
+    padding-bottom: 70px;
+  }
+  &-line {
+    position: absolute;
+    background: rgba(127, 103, 206, 0.5);
+    width: 100%;
+    height: 30px;
+    left: 0;
+    margin-top: 35px;
+    &::after {
+      margin-top: -12px;
+      margin-left: 64%;
+      content: "";
+      display: block;
+      width: 8px;
+      height: 12px;
+      background-image: url("../../assets/arrow-right.svg");
+    }
+    &::before {
+      margin-top: 8px;
+      margin-left: 36%;
+      content: "";
+      display: block;
+      width: 8px;
+      height: 12px;
+      background-image: url("../../assets/arrow-right.svg");
+    }
+  }
+  &-cards {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    align-items: center;
+    padding-bottom: 40px;
+    width: 100%;
+  }
+  &-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+    background-color: $main-purple;
+    text-align: center;
+    font-size: 50px;
+    line-height: 30px;
+    color: #fff;
+    margin-bottom: 40px;
+  }
+  p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+// FILOSOFY
+.filosofy {
+  margin-bottom: 100px;
+  &-title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 70px;
+    padding-bottom: 50px;
+  }
+  &-main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &-text {
+    font-size: 16px;
+    line-height: 30px;
+    max-width: 800px;
+  }
+}
+// BONUSES
+.bonuses {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &-title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 50px;
+    max-width: 300px;
+  }
+  &-card1 {
+    background: linear-gradient(212.91deg, #ab92ff -1.89%, #45347e 120.38%);
+    border-radius: 45px;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 125px 30px;
+    p {
+      max-width: 300px;
+      color: #fff;
+    }
+  }
+  &-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+  }
+  &-card2 {
+    background: linear-gradient(212.91deg, #d44747 -1.89%, #ad58bb 120.38%);
+    border-radius: 45px;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 50px 30px;
+    p {
+      max-width: 300px;
+      color: #fff;
+    }
+  }
+  &-card3 {
+    background: linear-gradient(212.91deg, #f83bb0 -1.89%, #b05bf2 120.38%);
+    border-radius: 45px;
+    font-weight: bold;
+    font-size: 25px;
+    line-height: 30px;
+    padding: 125px 30px;
+    margin-top: 30px;
+    margin-bottom: 115px;
+    p {
+      max-width: 300px;
+      color: #fff;
+    }
+  }
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #292929;
+  padding-top: 50px;
+  img {
+    padding-bottom: 14px;
+  }
+  h4 {
+    color: #fff;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 30px;
+    padding-bottom: 42px;
+  }
+  p{
+    color: #fff;
+    padding-bottom: 15px;
   }
 }

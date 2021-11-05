@@ -1,5 +1,27 @@
 $main-purple: #7f67ce;
-$black: #0B132A;
+$black: #0b132a;
 $container-width: 90%;
 
 $duration: 0.5s;
+
+@mixin btn-primary($color, $bg-color) {
+  margin-top: 55px;
+  color: $color;
+  background-color: $bg-color;
+  transition: all $duration ease;
+  cursor: pointer;
+  text-align: center;
+  width: 250px;
+  height: 60px;
+  border-radius: 10px;
+  border: 1px solid $bg-color;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 25px;
+  border-radius: 10px;
+  &:hover {
+    color: $bg-color;
+    background-color: $color;
+    transition: all $duration ease;
+  }
+}

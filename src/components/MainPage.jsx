@@ -1,7 +1,11 @@
 import { Link } from "react-router-dom";
 import Logo from "../assets/stk-logo.png";
 import Main from "../assets/stk-main.png";
-import StkWhite from "../assets/stk-profit.png";
+import Specialization from "../assets/stk-specialization.png";
+import Benefits from "../assets/stk-profit.png";
+import Filosofy from "../assets/stk-filosofy.png";
+import Footer from "../assets/stk-footer.png";
+import Depozit from "./Depozit";
 
 const MainPage = () => {
   return (
@@ -276,8 +280,159 @@ const MainPage = () => {
               </div>
             </div>
           </div>
+          {/* SPECIALIZATION */}
+          <div className="specialization">
+            <div className="specialization-text">
+              <h3>
+                <span className="purple"> Что</span> мы делаем
+              </h3>
+              <p>
+                <span className="purple">Мы предоставляем платный</span> доступ
+                к чатам, в которых публикуется инсайдерская информация о
+                ближайших перспективах котировок криптовалют. Также мы принимаем
+                средства на доверительное управление с гарантированным
+                минимальным размером прибыли для инвестора
+              </p>
+            </div>
+            <div className="specialization-image">
+              <img src={Specialization} alt="Specialization" />
+            </div>
+          </div>
+        </div>
+        {/* BENEFITS */}
+        <div className="benefits">
+          <div className="wrapper benefits-flex">
+            <div className="benefits-text">
+              <div className="benefits-title">Выгоды для инвесторов</div>
+              <div className="benefits-decription">
+                <li>
+                  Доход каждый день в размере от 1% до 4.5%, а при удачной
+                  конъюнктуре и больше.
+                </li>
+                <li>
+                  Возможность обучаться трейдинговым технологиям, чтобы
+                  зарабатывать на этом.
+                </li>
+                <li>Возможность рекламироваться на нашей площадке.</li>
+                <li>Хорошо зарабатывать, используя приобретенные знания.</li>
+                <li>Понять основные принципы прибыльного инвестирования</li>
+              </div>
+            </div>
+            <div className="benefits-image">
+              <img src={Benefits} alt="Benefits" />
+              <button className="benefits-image-btn">Присоединиться</button>
+            </div>
+          </div>
+        </div>
+        {/* DEPOZIT */}
+        <div className="wrapper">
+          <div className="depozit">
+            <div className="depozit-title">
+              <span className="purple">Открыть</span> депозит
+            </div>
+            <div className="depozit-cards">
+              <Depozit title="Стандартный" />
+              <Depozit title="Стандарт+" />
+            </div>
+          </div>
+          {/* ALGORITHM */}
+          <div className="algorithm">
+            <div className="algorithm-title">
+              <span className="purple">Алгоритм</span> работы
+            </div>
+            <div className="algorithm-line"></div>
+            <div className="algorithm-cards">
+              <div className="algorithm-card">
+                <div className="algorithm-circle">1</div>
+                <p>Ваше минимальное вложение в наш проект от 30 долларов США</p>
+              </div>
+              <div className="algorithm-card">
+                <div className="algorithm-circle">2</div>
+                <p>
+                  Наша команда ежедневно пополняет фонд проекта Stakeout, за
+                  счёт ведения нашей основной деятельности. В дальнейшем фонд
+                  заменит пул ликвидности токена STK
+                </p>
+              </div>
+              <div className="algorithm-card">
+                <div className="algorithm-circle">3</div>
+                <p>
+                  На ваш личный счет с первого дня начинают поступать
+                  заработанные деньги, которые можно реинвестировать на выгодных
+                  условиях
+                </p>
+              </div>
+            </div>
+          </div>
+          {/* FILOSOFY */}
+          <div className="filosofy">
+            <div className="filosofy-title">
+              <span className="purple">Наша</span> философия
+            </div>
+            <div className="filosofy-main">
+              <div className="filosofy-text">
+                <span className="purple">
+                  Мы не ставим своей основной задачей извлечение прибыли.
+                </span>{" "}
+                Мы хотим, чтобы криптовалюты и технология блокчейн стали
+                доступными и понятными для большинства людей. Ради этой
+                перспективы мы и принимаем от вас денежные средства, как
+                инвестиции. При этом вы тоже становитесь участниками большого
+                финансового и образовательного проекта. Минимальный размер
+                вашего вложения составляет всего 30 долларов США, что доступно
+                абсолютно каждому, но при этом открывает грандиозные
+                перспективы. А основная цель проекта закл ючается в создании
+                собственной криптовалютной биржи, при работе на которой
+                инвесторы будут иметь льготные условия. Также хотим обратиться к
+                тем, кто имеет возможность распространить данную информацию для
+                привлечения максимального количества инвесторов, рассказывая о
+                проекте Stakeout на разных площадках в интернете. Мы
+                отблагодарим вас финансово через действующую
+                <span className="purple"> реферальную программу.</span>
+              </div>
+              <div className="filosofy-image">
+                <img src={Filosofy} alt="Filosofy" />
+              </div>
+            </div>
+          </div>
+          {/* BOUNUSES */}
+          <div className="bonuses">
+            <div className="bonuses-title">
+              <span className="purple">Варианты </span>бонусов
+            </div>
+            <div className="bonuses-card1">
+              <p>
+                {" "}
+                5 процентов от прибыли с привлеченной вами суммы за первую
+                неделю
+              </p>
+            </div>
+            <div className="bonuses-wrapper">
+              <div className="bonuses-card2">
+                <p>
+                  При достижении квалификации второго уровня дается возможность
+                  в течение недели протестировать четвертую квалификацию, чтобы
+                  вы понимали, к чему стремитесь
+                </p>
+              </div>
+              <div className="bonuses-card3">
+                <p>
+                  1 токен STK за каждое новое вложение, превышающее 30 долларов
+                  США
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <footer className="footer">
+        <img src={Footer} alt="Benefits" />
+
+        <h4>
+          Stake<span className="purple">out</span>
+        </h4>
+        <p>2021 © Все права сохранены</p>
+      </footer>
     </>
   );
 };
