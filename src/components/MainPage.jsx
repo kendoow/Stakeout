@@ -18,10 +18,10 @@ const MainPage = () => {
               Stake<span className="purple">out</span>
             </div>
             <nav className="nav">
-              <a href="#" className="nav-item">
+              <a href="#about" className="nav-item">
                 О проекте
               </a>
-              <a href="#" className="nav-item">
+              <a href="#goals" className="nav-item">
                 Цели
               </a>
               <a href="#" className="nav-item">
@@ -132,7 +132,7 @@ const MainPage = () => {
           </div>
 
           {/* О ПРОЕКТЕ */}
-          <div className="about">
+          <div id = "about" className="about">
             <h2 className="about-title">
               О <span className="purple">проекте</span>
             </h2>
@@ -238,7 +238,7 @@ const MainPage = () => {
                 смог получить прибыль и прекратил. Это одна из причин, почему
                 была разработана площадка{" "}
                 <span className="purple">Stakeout</span>.
-                <span className="purple">
+                <span id = 'goals' className="purple">
                   {" "}
                   Мы стремимся к тому, чтобы мир криптовалют стал понятен для
                   каждого человека.
@@ -250,7 +250,7 @@ const MainPage = () => {
             </div>
           </div>
           {/* GOALS */}
-          <div className="goals">
+          <div  className="goals">
             <div className="goals-title">
               <span className="purple">Цели</span> проекта
             </div>
