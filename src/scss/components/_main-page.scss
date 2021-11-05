@@ -4,7 +4,8 @@
   max-width: $container-width;
 }
 .header {
-  padding-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: fixed;
   background-color: #fff;
   top: 0;
@@ -140,6 +141,9 @@
     align-items: center;
     padding-right: 80px;
     border-right: 2px solid #eeeff2;
+    &:last-child{
+      border-right: none;
+    }
   }
   &-circle {
     width: 55px;
@@ -171,22 +175,57 @@
     font-weight: bold;
     font-size: 50px;
     line-height: 70px;
+    margin-bottom: 40px;
   }
   &-main {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  &-piramida1 {
-    width: 114.31px;
-    height: 114.31px;
-    background: #7f67ce;
-    border-radius: 28px;
-    transform: matrix(0.71, -0.41, 1.22, 0.71, 0, 0);
+  &-img {
+    position: relative;
+    top: 0;
   }
   &-text {
-    max-width: 950px;
+    max-width: 1150px;
     font-size: 16px;
     line-height: 30px;
+  }
+}
+// GOALS
+.goals {
+  margin-top: 60px;
+  margin-bottom: 90px;
+  &-title {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 70px;
+    margin-bottom: 60px;
+  }
+  &-cards {
+    max-width: 1140px;  
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 3px 14px 22px -12px rgba(34, 60, 80, 0.2);
+  }
+  &-card{
+    border-right: 2px solid #eeeff2;
+    padding-right: 11%;
+    &:last-child{
+      border-right: none;
+    }
+  }
+  h3 {
+    font-weight: 900;
+    text-align: center;
+    font-size: 70px;
+    line-height: 70px;
+    color: $main-purple;
+  }
+  p{
+    text-align: center;
+    max-width: 200px;
   }
 }
