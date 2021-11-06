@@ -1,15 +1,26 @@
 import { Link } from "react-router-dom";
 import { Link as LinkScroll, animateScroll as scroll } from "react-scroll";
 import Logo from "../assets/stk-logo.png";
+const scrollToTop = () => {
+  scroll.scrollToTop();
+};
 const Header = () => {
   return (
     <header className="header">
       <div className="wrapper">
         <div className="header-wrapper">
-          <div className="header-logo">
+          <LinkScroll
+            onClick={scrollToTop}
+            className="header-logo"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration={500}
+          >
             <img width="40" height="40" src={Logo} alt="logo" />
             Stake<span className="purple">out</span>
-          </div>
+          </LinkScroll>
+
           <nav className="nav">
             <LinkScroll
               className="nav-item"
@@ -65,7 +76,7 @@ const Header = () => {
             </LinkScroll>
           </nav>
           <div className="header-links">
-            <Link to="/regestration">
+            <Link to="/signup">
               <li className="header-item">Регистрация</li>
             </Link>
             <Link to="/login">

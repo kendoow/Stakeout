@@ -4,7 +4,8 @@ import Benefits from "../assets/stk-profit.png";
 import Filosofy from "../assets/stk-filosofy.png";
 import Footer from "../assets/stk-footer.png";
 
-import Header from "./Header";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 const MainPage = () => {
   return (
@@ -23,7 +24,9 @@ const MainPage = () => {
                 С помощью Stakeout вы не только будете получать пассивный доход,
                 но и получите актуальные знания и навыки работы с blockchain
               </div>
-              <button className="content-btn">Начните прямо сейчас</button>
+              <Link to="/signup">
+                <button className="content-btn">Начните прямо сейчас</button>
+              </Link>
             </div>
             <div className="content-image">
               <img src={Main} alt="main" />
@@ -312,13 +315,15 @@ const MainPage = () => {
                   Данный пакет - это прямая инвестиция на нужды проекта ....
                 </div>
                 <div className="depozit-card-btn">
-                  <button>Приобрести пакет</button>
+                  <Link to="/signup">
+                    <button>Приобрести пакет</button>
+                  </Link>
                 </div>
               </div>
               <div className="depozit-card">
                 <div className="depozit-card-title depozit-card-title-purple">
                   Пакет
-                  <h3 >Стандарт+</h3>
+                  <h3>Стандарт+</h3>
                 </div>
                 <div className="depozit-card-items">
                   <li>1.Вы получите...</li>
@@ -332,7 +337,9 @@ const MainPage = () => {
                   Данный пакет - это прямая инвестиция на нужды проекта ....
                 </div>
                 <div className="depozit-card-btn">
-                  <button>Приобрести пакет</button>
+                  <Link to="/signup">
+                    <button>Приобрести пакет</button>
+                  </Link>
                 </div>
               </div>
             </div>

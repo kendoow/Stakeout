@@ -19,6 +19,7 @@ header {
     margin: 0 auto;
   }
   &-logo {
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,8 +84,7 @@ header {
   }
 }
 // MAIN
-.main {
-}
+
 .pt {
   padding-top: 100px;
 }
@@ -126,13 +126,13 @@ header {
   &-cart {
     display: flex;
     justify-content: center;
-    padding-left: 30px;
+    padding-left: 45px;
     align-items: center;
-    padding-right: 50px;
+    padding-right: 45px;
     border-right: 2px solid #eeeff2;
     &:last-child {
       border-right: none;
-      padding-right: 30px;
+      padding-right: 45px;
     }
   }
   &-circle {
