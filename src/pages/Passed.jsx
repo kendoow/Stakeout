@@ -11,7 +11,7 @@ const Passed = () => {
           </h4>
           <p>Если письма не видно - посмотрите папку Спам</p>
         </div>
-        <Link to="/stakeout" exact>
+        <Link to="/login" exact>
           <div className="passed-button">
             <button className="passed-btn">Войти в аккаунт</button>
           </div>
