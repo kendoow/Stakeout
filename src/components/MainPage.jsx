@@ -1,53 +1,17 @@
-import { Link } from "react-router-dom";
-import Logo from "../assets/stk-logo.png";
 import Main from "../assets/stk-main.png";
 import Specialization from "../assets/stk-specialization.png";
 import Benefits from "../assets/stk-profit.png";
 import Filosofy from "../assets/stk-filosofy.png";
 import Footer from "../assets/stk-footer.png";
-import Depozit from "./Depozit";
+
+import Header from "./Header";
 
 const MainPage = () => {
   return (
     <>
-      <div className="header">
-        <div className="wrapper">
-          <div className="header-wrapper">
-            <div className="header-logo">
-              <img width="40" height="40" src={Logo} alt="logo" />
-              Stake<span className="purple">out</span>
-            </div>
-            <nav className="nav">
-              <a href="#about" className="nav-item">
-                О проекте
-              </a>
-              <a href="#goals" className="nav-item">
-                Цели
-              </a>
-              <a href="#" className="nav-item">
-                Алгоритм
-              </a>
-              <a href="#" className="nav-item">
-                Инвесторам
-              </a>
-              <a href="#" className="nav-item">
-                Философия
-              </a>
-            </nav>
-            <div className="header-links">
-              <Link to="/regestration">
-                <li className="header-item">Регистрация</li>
-              </Link>
-              <Link to="/login">
-                <button className="header-btn">Войти</button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div className="main">
-        <div className="wrapper">
+      <Header />
+      <main className="main">
+        <div className="wrapper pt">
           {/* блок о доходах */}
           <div className="content">
             <div className="content-text">
@@ -132,7 +96,7 @@ const MainPage = () => {
           </div>
 
           {/* О ПРОЕКТЕ */}
-          <div id = "about" className="about">
+          <div id="about" className="about">
             <h2 className="about-title">
               О <span className="purple">проекте</span>
             </h2>
@@ -238,7 +202,7 @@ const MainPage = () => {
                 смог получить прибыль и прекратил. Это одна из причин, почему
                 была разработана площадка{" "}
                 <span className="purple">Stakeout</span>.
-                <span id = 'goals' className="purple">
+                <span className="purple">
                   {" "}
                   Мы стремимся к тому, чтобы мир криптовалют стал понятен для
                   каждого человека.
@@ -250,7 +214,7 @@ const MainPage = () => {
             </div>
           </div>
           {/* GOALS */}
-          <div  className="goals">
+          <div id="goals" className="goals">
             <div className="goals-title">
               <span className="purple">Цели</span> проекта
             </div>
@@ -300,7 +264,7 @@ const MainPage = () => {
           </div>
         </div>
         {/* BENEFITS */}
-        <div className="benefits">
+        <div id="benefits" className="benefits">
           <div className="wrapper benefits-flex">
             <div className="benefits-text">
               <div className="benefits-title">Выгоды для инвесторов</div>
@@ -331,12 +295,50 @@ const MainPage = () => {
               <span className="purple">Открыть</span> депозит
             </div>
             <div className="depozit-cards">
-              <Depozit title="Стандартный" />
-              <Depozit title="Стандарт+" />
+              <div className="depozit-card">
+                <div className="depozit-card-title depozit-card-title-white">
+                  Пакет
+                  <h3 className="purple">Стандартный</h3>
+                </div>
+                <div className="depozit-card-items">
+                  <li>1.Вы получите...</li>
+                  <li>2.Вы получите...</li>
+                  <li>3.Вы получите...</li>
+                  <li>4.Вы получите...</li>
+                  <li>5.Вы получите...</li>
+                  <li>6.Вы получите...</li>
+                </div>
+                <div className="depozit-card-descr">
+                  Данный пакет - это прямая инвестиция на нужды проекта ....
+                </div>
+                <div className="depozit-card-btn">
+                  <button>Приобрести пакет</button>
+                </div>
+              </div>
+              <div className="depozit-card">
+                <div className="depozit-card-title depozit-card-title-purple">
+                  Пакет
+                  <h3 >Стандарт+</h3>
+                </div>
+                <div className="depozit-card-items">
+                  <li>1.Вы получите...</li>
+                  <li>2.Вы получите...</li>
+                  <li>3.Вы получите...</li>
+                  <li>4.Вы получите...</li>
+                  <li>5.Вы получите...</li>
+                  <li>6.Вы получите...</li>
+                </div>
+                <div className="depozit-card-descr">
+                  Данный пакет - это прямая инвестиция на нужды проекта ....
+                </div>
+                <div className="depozit-card-btn">
+                  <button>Приобрести пакет</button>
+                </div>
+              </div>
             </div>
           </div>
           {/* ALGORITHM */}
-          <div className="algorithm">
+          <div id="algorithm" className="algorithm">
             <div className="algorithm-title">
               <span className="purple">Алгоритм</span> работы
             </div>
@@ -365,7 +367,7 @@ const MainPage = () => {
             </div>
           </div>
           {/* FILOSOFY */}
-          <div className="filosofy">
+          <div id="filosofy" className="filosofy">
             <div className="filosofy-title">
               <span className="purple">Наша</span> философия
             </div>
@@ -424,7 +426,7 @@ const MainPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </main>
       <footer className="footer">
         <img src={Footer} alt="Benefits" />
 
