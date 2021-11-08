@@ -1,11 +1,12 @@
-@import "../variables";
-.login {
+
+.signup {
   background: #e5e5e5;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   &-wrapper {
     background-color: #fff;
     width: 500px;
@@ -24,7 +25,7 @@
       padding-right: 40px;
     }
   }
-  &-forgotten {
+  &-login {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +40,6 @@
     border-bottom: 1px solid #4d92fa;
   }
   &-forms {
-    padding-top: 120px;
     display: flex;
     flex-direction: column;
     width: 90%;
@@ -54,6 +54,7 @@
     border: none;
     font-size: 16px;
     line-height: 19px;
+
     color: #000;
     &:last-child {
       margin-bottom: 20px;
@@ -64,7 +65,8 @@
     display: flex;
     padding-left: 6%;
     padding-right: 10%;
-    margin-bottom: 100px;
+    justify-content: space-around;
+    margin-bottom: 40px;
     align-items: center;
 
     input[type="checkbox"] {
@@ -76,10 +78,11 @@
     }
     &-text {
       display: flex;
+      align-items: center   ;
       font-size: 14px;
       line-height: 17px;
       p {
-        padding-left: 15px;
+        padding-right: 5px;
       }
     }
   }

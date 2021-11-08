@@ -1,0 +1,233 @@
+.stakeout {
+  background: #f4f4f4;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+
+  &-wrapper {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  &-title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    padding-top: 25px;
+    padding-left: 25px;
+  }
+  &-background {
+    overflow: hidden;
+    &-circle1 {
+      overflow: hidden;
+      position: absolute;
+      background: #7f67ce;
+      width: 500px;
+      height: 500px;
+      border-radius: 250px;
+      bottom: -250px;
+      left: -200px;
+      z-index: 1;
+    }
+    &-circle2 {
+      overflow: hidden;
+      position: absolute;
+      background: #7f67ce;
+      width: 181px;
+      height: 181px;
+      top: -154px;
+      border-radius: 90px;
+      right: 0;
+      z-index: 1;
+    }
+    &-circle3 {
+      overflow: hidden;
+      position: absolute;
+      width: 427px;
+      height: 427px;
+      top: 30%;
+      border-radius: 90px;
+      right: 0;
+      background: rgba(127, 103, 206, 0.15);
+      filter: blur(80px);
+      z-index: 1;
+    }
+  }
+  // Учет инвестиций
+  &-investments {
+    &-header {
+      padding-top: 25px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-left: 25px;
+    }
+    &-title {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 38px;
+      padding-right: 20%;
+    }
+    &-exchangerate {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid rgba(0, 0, 0, 0.5);
+      border-radius: 5px;
+      &-main {
+        padding: 4px;
+        padding-left: 8px;
+      }
+      &-percent {
+        background: #f14336;
+        border-radius: 3px;
+        padding: 2px 4px 2px 13px;
+        margin-right: 2px;
+        color: #fff;
+        svg {
+          margin-right: 5px;
+          margin-bottom: 1px;
+        }
+      }
+    }
+    &-stk-buy {
+      font-size: 16px;
+      line-height: 12px;
+      text-align: center;
+      color: #7f67ce;
+      padding: 8px 12px;
+      border: 1px solid #7f67ce;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    &-stk-litebuy {
+      background: #7f67ce;
+      border-radius: 5px;
+      text-align: center;
+      color: #ffffff;
+      font-size: 16px;
+      line-height: 12px;
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+    &-open {
+      background: #ffffff;
+      border-radius: 5px;
+      margin-right: 30px;
+      padding: 8px 12px;
+      cursor: pointer;
+      svg {
+        margin-right: 7px;
+      }
+    }
+    &-cards {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    &-card {
+      margin-top: 40px;
+      margin-left: 30px;
+      background: linear-gradient(
+        144.08deg,
+        #6958a4 0.2%,
+        rgba(255, 255, 255, 0) 122.82%
+      );
+      filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.1));
+      border-radius: 10px;
+      width: 300px;
+      &-top {
+        display: flex;
+        justify-content: space-between;
+        h4 {
+          font-weight: 500;
+          font-size: 20px;
+          line-height: 19px;
+          color: #ffffff;
+          padding: 15px 70px 30px 15px;
+        }
+        img {
+          margin: 15px 20px 0 0;
+        }
+      }
+      p {
+        font-size: 14px;
+        margin-left: 15px;
+      }
+      h4 {
+        font-size: 20px;
+        margin-left: 15px;
+        font-weight: 500;
+        margin-bottom: 10px;
+      }
+      &-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      &-button {
+        &-replenish {
+          margin-right: 25px;
+          padding: 10px 20px;
+          background: #1c9f38;
+          border-radius: 5px;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+        }
+        &-withdraw {
+          padding: 10px 20px;
+          background: #7f67ce;
+          border-radius: 5px;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+        }
+      }
+    }
+    &-all-purse {
+      background: #ffffff;
+      box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+      font-size: 16px;
+      line-height: 14px;
+      text-align: center;
+      color: #7f67ce;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-left: 2%;
+      margin-right: 2%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      svg{
+         margin-left: 10px;
+      }
+    }
+  }
+  // Статьи
+  &-articles-text {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    padding-top: 25px;
+    padding-left: 25px;
+  }
+  // Депозит
+  &-depozit-text {
+  }
+  &-depozit {
+    &-wrapper {
+      z-index: 2;
+      &-cards {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        margin: 100px;
+      }
+    }
+  }
+}

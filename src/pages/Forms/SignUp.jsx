@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import Logo from "../../assets/stk-logo.png";
 const SignUp = () => {
   const [CheckBoxColor, SetCheckBoxColor] = useState("#ffffff");
   const handleChnageTextColor = (e) => {
@@ -7,6 +8,12 @@ const SignUp = () => {
   };
   return (
     <div className="signup">
+      <Link to="/">
+        <div className="windows-logo">
+          <img height={40} width={40} src={Logo} alt="Logo" />
+          <p>Stakeout</p>
+        </div>
+      </Link>
       <div className="signup-wrapper">
         <div className="signup-text">
           <h3>Регистрация</h3>
@@ -21,10 +28,10 @@ const SignUp = () => {
           <input className="signup-form" type="text" placeholder="Ваше имя" />
           <input className="signup-form" type="text" placeholder="Логин" />
           <input className="signup-form" type="text" placeholder="Почта" />
-          <input className="signup-form" type="text" placeholder="Пароль" />
+          <input className="signup-form" type="password" placeholder="Пароль" />
           <input
             className="signup-form"
-            type="text"
+            type="password"
             placeholder="Повторите пароль"
           />
         </div>

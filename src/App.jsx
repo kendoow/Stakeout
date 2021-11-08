@@ -1,20 +1,22 @@
-import { Route, Routes } from "react-router";
-import SignUp from "./pages/SignUp";
+import { Route, Routes } from "react-router-dom";
+import SignUp from "./pages/Forms/SignUp";
 import MainPage from "./pages/MainPage";
-import Passed from "./pages/Passed";
-import LogIn from "./pages/LogIn";
-import PasswordReset from "./pages/PasswordReset";
+import Passed from "./pages/Forms/Passed";
+import LogIn from "./pages/Forms/LogIn";
+import PasswordReset from "./pages/Forms/PasswordReset";
+import Stakeout from "./pages/Stakeout";
 const App = () => {
   return (
     <>
       <Routes>
-        <div className="">
+        {/* <div className=""> */}
           <Route path="/" element={<MainPage />} exact />
-        </div>
+        {/* </div> */}
         <Route path="/signup" exact element={<SignUp />}></Route>
         <Route path="/signup/passed" exact element={<Passed />}></Route>
         <Route path = "/login" exact element = {<LogIn />}></Route>
         <Route path = "/password-reset" exact element = {<PasswordReset />}></Route>
+        <Route path = "/login/stakeout/*" exact element = {<Stakeout/>}></Route>
       </Routes>
     </>
   );
