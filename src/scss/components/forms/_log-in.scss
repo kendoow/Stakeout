@@ -103,6 +103,12 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 60px;
+    button:disabled{
+      background-color: #000;
+    }
+    button:disabled:hover{
+      color: #fff;
+    }
   }
   &-btn {
     display: flex;
@@ -111,4 +117,7 @@
     margin-top: 20px !important;
     @include btn-primary(#fff, $main-purple);
   }
+}
+.error {
+  color: red;
 }

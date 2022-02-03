@@ -26,7 +26,7 @@ const PasswordReset = () => {
           />
         </div>
         <div className="password-button">
-          <Link to="./????" exact>
+          <Link to="./???" exact>
             <button className="password-btn">Восстановить</button>
           </Link>
         </div>

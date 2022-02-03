@@ -203,8 +203,8 @@
       justify-content: center;
       align-items: center;
       cursor: pointer;
-      svg{
-         margin-left: 10px;
+      svg {
+        margin-left: 10px;
       }
     }
   }
@@ -227,6 +227,44 @@
         align-items: center;
         justify-content: space-around;
         margin: 100px;
+      }
+    }
+  }
+  // Структура
+  &-structure {
+    &-text {
+      font-weight: bold;
+      font-size: 32px;
+      line-height: 38px;
+      padding-top: 25px;
+      padding-left: 25px;
+      margin-bottom: 25px;
+    }
+    &-card {
+      display: flex;
+      align-items: center;
+
+      margin-left: 25px;
+      margin-right: 10px;
+      font-weight: bold;
+      p {
+        padding-left: 15px;
+      }
+      &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid rgba(127, 103, 206, 0.3);
+        padding-top: 20px;
+      }
+      &-price {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 8px 15px;
+        background: #7f67ce;
+        color: #fff;
+        border-radius: 10px;
+        margin-right: 30px;
       }
     }
   }
